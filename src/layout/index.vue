@@ -15,15 +15,4 @@ import Aside from "./components/aside.vue";
 import Header from "./components/header.vue";
 import Main from "./components/main.vue";</script>
 
-<!--<style scoped>-->
-<!--/*.demo .el-container {*/-->
-<!--/*  margin: 0 0;*/-->
-<!--/*  width: 100vw;*/-->
-<!--/*}*/-->
-
-<!--.demo1 .el-container {-->
-<!--  margin: 0 0;-->
-<!--  width: 85vw;-->
-<!--}-->
-<!--</style>-->
 

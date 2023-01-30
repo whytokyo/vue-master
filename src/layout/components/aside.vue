@@ -2,7 +2,7 @@
   <el-aside class="layout-aside">
     <el-scrollbar>
       <el-menu :default-openeds="['2', '3']" :router="true">
-        <el-menu-item index="/index">
+        <el-menu-item index="/home">
           <template #title>
             <el-icon>
               <HomeFilled/>

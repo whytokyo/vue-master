@@ -24,14 +24,14 @@ const {proxy} = getCurrentInstance();
 const userStore = useUserStore();
 
 const loginForm = ref({
-  username: '',
-  password: ''
+  username: 'admin',
+  password: '123456',
 });
 
 const loginRules = reactive({
   username: [{required: true, trigger: 'blur', message: '请输入你的账号'}],
   password: [{required: true, trigger: 'blur', message: '请输入你的密码'}],
-})
+});
 
 
 function handleLogin() {
