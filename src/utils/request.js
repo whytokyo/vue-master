@@ -1,4 +1,5 @@
 import axios from 'axios'
+import {ElMessage} from "element-plus";
 
 axios.defaults.headers['Content-Type'] = 'application/json;charset=utf-8'
 
@@ -29,15 +30,17 @@ const service = axios.create({
 // );
 
 // 添加响应拦截器
-// service.interceptors.response.use(
-//     (response) => {
-//         // 对响应数据做点什么
-//         if (response.data.code == 200) {
-//             ElMessage.error(response.data.code + response.data.message);
-//             return Promise.reject(service.interceptors.response);
-//         }
-//         return response.data;
-//     }
-// )
+service.interceptors.response.use(
+    (response) => {
+        // 对响应数据做点什么
+        if (response.data.code != 200) {
+            ElMessage.error(response.data.code + response.data.message);
+            return Promise.reject(service.interceptors.response);
+        }
+        return response;
+    }
+)
+
+
 
 export default service

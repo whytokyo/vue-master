@@ -9,11 +9,26 @@ export function listUser(query) {
     })
 }
 
-
 export function addUser(data) {
     return request({
         url: '/system/user/add',
         method:  'put',
         data: data
+    })
+}
+
+export function editUser(form) {
+    return request({
+        url: '/system/user/edit',
+        method:  'put',
+        data: form
+    })
+}
+
+export function delUser(userId) {
+    return request({
+        url: '/system/user/del/',
+        method:  'delete',
+        data: userId
     })
 }
